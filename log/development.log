@@ -1327,3 +1327,121 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.erb within layouts/application (2.3ms)
   Rendered layouts/_flash.erb (0.0ms)
 Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 50.24.36.31 at 2022-02-28 02:55:21 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `map' for nil:NilClass):
+  app/controllers/movies_controller.rb:12:in `index'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.1ms)
+
+
+Started GET "/" for 50.24.36.31 at 2022-02-28 02:56:12 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+NoMethodError (undefined method `map' for nil:NilClass):
+  app/controllers/movies_controller.rb:12:in `index'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (10.9ms)
+
+
+Started GET "/" for 50.24.36.31 at 2022-02-28 02:57:23 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `all_ratings' for #<Class:0x00007f55d08fdec8>):
+  app/controllers/movies_controller.rb:10:in `index'
+
+
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /home/ec2-user/.rvm/gems/ruby-2.6.6/gems/actionpack-4.2.11/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 50.24.36.31 at 2022-02-28 02:58:02 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.1ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'R', 'PG-13', 'PG')[0m
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_flash.erb (0.4ms)
+Completed 200 OK in 198ms (Views: 188.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sortby=title" for 50.24.36.31 at 2022-02-28 02:58:11 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sortby"=>"title"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+Redirected to https://17c25e99c1dc4c6e82f718f07ad4fc7c.vfs.cloud9.us-east-1.amazonaws.com/movies?ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sortby=title
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sortby=title" for 50.24.36.31 at 2022-02-28 02:58:11 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sortby"=>"title"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY title
+  Rendered movies/index.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 11ms (Views: 9.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sortby=release_date" for 50.24.36.31 at 2022-02-28 02:58:12 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sortby"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+Redirected to https://17c25e99c1dc4c6e82f718f07ad4fc7c.vfs.cloud9.us-east-1.amazonaws.com/movies?ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sortby=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BG%5D=G&ratings%5BPG%5D=PG&ratings%5BPG-13%5D=PG-13&ratings%5BR%5D=R&sortby=release_date" for 50.24.36.31 at 2022-02-28 02:58:12 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"G"=>"G", "PG"=>"PG", "PG-13"=>"PG-13", "R"=>"R"}, "sortby"=>"release_date"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'R')  ORDER BY release_date[0m
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_flash.erb (0.1ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/movies?utf8=%E2%9C%93&ratings%5BPG-13%5D=&ratings%5BPG%5D=&commit=Refresh" for 50.24.36.31 at 2022-02-28 02:58:16 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"utf8"=>"✓", "ratings"=>{"PG-13"=>"", "PG"=>""}, "commit"=>"Refresh"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT DISTINCT "movies"."rating" FROM "movies"
+Redirected to https://17c25e99c1dc4c6e82f718f07ad4fc7c.vfs.cloud9.us-east-1.amazonaws.com/movies?ratings%5BPG%5D=&ratings%5BPG-13%5D=&sortby=release_date
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/movies?ratings%5BPG%5D=&ratings%5BPG-13%5D=&sortby=release_date" for 50.24.36.31 at 2022-02-28 02:58:16 +0000
+Cannot render console from 50.24.36.31! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MoviesController#index as HTML
+  Parameters: {"ratings"=>{"PG"=>"", "PG-13"=>""}, "sortby"=>"release_date"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT DISTINCT "movies"."rating" FROM "movies"[0m
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('PG', 'PG-13')  ORDER BY release_date
+  Rendered movies/index.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_flash.erb (0.0ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.3ms)
